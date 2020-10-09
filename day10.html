@@ -176,8 +176,8 @@
       <p>
         <p>My nested paragraph</p>
       </p>
-      <ul>
-        <ul>
+    
+        <ul id="ul_o">
           <li>Iphone</li>
           <li>Car
             <ul>
@@ -307,6 +307,12 @@
        let baby = document.createElement("li");
        baby.innerText="new item";
        parent.appendChild(baby);
+   }
+   function emptyList(){
+     let num=document.querySelectorAll("#ul_o li").length;
+     let list = document.querySelector("ul");
+     list.parentNode.removeChild(list);
+     
    }
  
 
