@@ -55,6 +55,7 @@
           28) Create an array of arrays, in which every array has 10 random numbers      thiss
 
           29) Create a function that gets 2 arrays and returns the longest one
+
           30) Create a function that gets 2 arrays of numbers and returns the one with the higher sum of values
           DOM 
           31) Get element with ID "container" from the page
@@ -216,16 +217,35 @@
     console.log(Math.min(...numArray));
     
 
-
-    console.log(parentArray);
-    function LengthofArrays(){
-        if(numArray.length>myArray.length){
-            return numArray;
+    numArray2=[2,3,4,5,6];
+   
+    function LengthofArrays(x,y){
+        if(x.length>y.length){
+            return x;
         }else{
-            return myArray;
+            return y;
         }
-        console.log(LengthofArrays);
+        console.log(LengthofArrays());
     }
+    function sumArrays(x,y){
+
+        sum1=0;
+        sum2=0;
+        for(i=0;i<x.length;i++){
+            sum1=sum1+x[i];
+        }
+        for(i=0;i<y.length;i++){
+            sum2=sum2+y[i];
+        }
+        if(sum1>sum2){
+            return sum1;
+        }
+        else {
+            return sum2;
+        }
+        
+    }
+   console.log(sumArrays(numArray,numArray2)) ;
     
     
     </script>
