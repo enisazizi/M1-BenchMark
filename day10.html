@@ -73,8 +73,11 @@
 
 
           36) Write a function to add the class "test" to each row in the table
+
           37) Write a function to add a red background to every link in the page
+
           38) Console log "Page loaded" when the page is correctly loaded
+
           39) Write a function to add new items to a UL
           40) Write a function to empty a list
           EXTRA 
@@ -160,7 +163,7 @@
       </tr>
       <tr>
         <td>row_4</td>
-        <td><img src="Enis_IMG.jpg" height="20px;" alt=""></td>
+        <td><a href="https://www.facebook.com/azizienisi"><img src="Enis_IMG.jpg" height="20px;" alt=""></a></td>
         <td>col_3</td>
         <td>col_4</td>
         <td>col_5</td>
@@ -196,6 +199,11 @@
     </footer>
 
     <script>
+        window.onload = function () {
+            console.log("Page has been loaded")
+        };
+
+
     let x="John";
     let y="Doe";
     console.log(x+"<>"+y);
@@ -279,6 +287,21 @@
        parent.appendChild(x);
        
    }
+   function addClass(){
+       let adds = document.querySelectorAll("tr");
+       for(i=0; i<adds.length; i++ ){
+           adds[i].className="test";
+       }
+   }
+   function bgLink(){
+       let bg= document.querySelectorAll("a");
+
+       for(i=0;i<bg.length;i++){
+           bg[i].style.backgroundColor="red";
+       }
+
+   }
+ 
 
   
     
