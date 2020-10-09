@@ -58,6 +58,7 @@
 
           30) Create a function that gets 2 arrays of numbers and returns the one with the higher sum of values
           DOM 
+
           31) Get element with ID "container" from the page
           32) Get every "td" from the page
           33) Create a cycle that prints the text inside every td of the page
@@ -159,7 +160,7 @@
     </table>
     <hr>
 
-    <div class="container">
+    <div id="container">
       <p>
         <p>My nested paragraph</p>
       </p>
@@ -247,6 +248,8 @@
     }
    console.log(sumArrays(numArray,numArray2)) ;
     
+   let ele = document.querySelector("#container");
+   console.log(ele);
     
     </script>
     </body>
