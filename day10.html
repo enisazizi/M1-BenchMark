@@ -79,6 +79,7 @@
           38) Console log "Page loaded" when the page is correctly loaded
 
           39) Write a function to add new items to a UL
+
           40) Write a function to empty a list
           EXTRA 
           41) Add an eventListener to alert when the mouse is over a link, displaying the URL
@@ -300,6 +301,12 @@
            bg[i].style.backgroundColor="red";
        }
 
+   }
+   function addItems(){
+       let parent = document.querySelector("ul");
+       let baby = document.createElement("li");
+       baby.innerText="new item";
+       parent.appendChild(baby);
    }
  
 
