@@ -106,11 +106,13 @@
           border: 1px solid black;
           border-radius: 15px;
           padding: 5px;
+          
         }
         table td{
           border:1px solid green;
             border-style: dotted;
-          
+            width: 50px;
+          height: 50px;
         }
         h1{
           text-align: center;
@@ -131,6 +133,10 @@
         .hide{
           display: none;
         }
+        tr.dotted td {
+        border-bottom: dotted 1px red;
+        }
+
       </style>
   </head>
     <body>
@@ -153,7 +159,7 @@
         <td><img src="Enis_IMG.jpg" height="20px;" alt=""></td>
         <td>col_3</td>
         <td>col_4</td>
-        <td>col_5</td>
+        
       </tr>
       <tr>
         <td>row_3</td>
@@ -267,10 +273,10 @@
             sum2=sum2+y[i];
         }
         if(sum1>sum2){
-            return sum1;
+            return x;
         }
         else {
-            return sum2;
+            return y;
         }
         
     }
@@ -320,12 +326,22 @@
        parent.appendChild(baby);
    }
    function emptyList(){
-     let num=document.querySelectorAll("#ul_o li").length;
+     
      let list = document.querySelector("ul");
      list.parentNode.removeChild(list);
      
    }
-  
+   const ArrayofArrays = function(){
+     let biggerArrays=[]
+     for(i=0;i<5;i++){
+       let smallerArray=[]
+       for(y=0;y<10;y++){
+         smallerArray.push(Math.floor(Math.random()*10+1))
+       }
+       biggerArrays.push(smallerArray)
+     }
+     console.log(biggerArrays)
+   }
   
     
     </script>
