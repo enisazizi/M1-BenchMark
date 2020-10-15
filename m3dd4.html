@@ -70,8 +70,10 @@
     function AddAndRemove(){
      
         let names=document.querySelectorAll(".list-group-item");
-        names.splice(Math.floor(Math.random()*10),1);
-
+        
+            let parent=document.querySelector(".team0");
+            let child=names[Math.floor(Math.random()*names.length)];
+            parent.appendChild(child);
 
     }
     </script>
