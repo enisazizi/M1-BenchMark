@@ -1,0 +1,82 @@
+ <!-- WELCOME TO THE STRIVE TEAM GENERATOR!
+    The app is pretty straight forward, use Bootstrap to add the following features:
+    - The user can add a list of names
+    - The user can set the number of teams
+    - Every time the user clicks on the "assign" button, a random name is placed in a team and removed from the list
+    - Each team should be inside a "column"
+    - [EXTRA] Create a button to remove an user from a team, putting him back in the main list
+    - [EXTRA] Create a button to reset the state of the app
+--> 
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    
+
+  </head>
+  <body class="container mt-3">
+    <span class=" mr-3">
+
+        <input type="text" id="AddName">
+
+      <input type="button" value="Add Name" onclick="AddName()">
+    </span>
+    <span>
+        <input type="text" id="AddNum">
+
+      <input type="button" value="Add Number of Teams" onclick="AddNumbers()">
+    </span>
+    <p>The Names you Added</p>
+    <ul class="list-group list-group-flush" id="apendi">
+
+    </ul>
+    
+   
+
+    <section class="row">
+        
+
+    </section>
+    <input type="button" onclick="AddAndRemove()" value="Assign">
+   
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script>
+        //let arrayOfNames=['Enis','Stefano C','Stefano M','Diego','Ricardo','Luffy','Zoro','Nami','Robin','Sanji'];
+        function AddName(){
+            let name= document.querySelector("#AddName");
+            let listt= document.querySelector("#apendi");
+            let list=document.createElement("li");
+            list.className="list-group-item";
+            list.innerHTML = name.value;
+            listt.appendChild(list);
+            
+        }
+    
+        function AddNumbers() {
+         let teamList = document.querySelector(".row");
+         let teamNumber = document.querySelector("#AddNum");
+            for (let i = 0; i < parseInt(teamNumber.value); i++) {
+                team = document.createElement("ul");
+                team.className="team"+i
+                team.innerHTML = "Teams"+(i+1);
+                teamList.appendChild(team);
+        }
+    }
+    function AddAndRemove(){
+     
+        let names=document.querySelectorAll(".list-group-item");
+        names.splice(Math.floor(Math.random()*10),1);
+
+
+    }
+    </script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  </body>
+</html>
